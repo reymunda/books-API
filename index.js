@@ -23,4 +23,14 @@ app.get('/api/programmingbooks/:id',(req,resp) => {
     if(!programmingBook) resp.status(404).send('Book not found')
     resp.send(programmingBook)
 })
+app.post('/api/programmingbooks/add',(req,resp) => {
+    let programmingBook = {
+        id: programmingBooks.length + 1,
+        title: req.body.title,
+        description: req.body.description,
+        price: req.body.price
+    }
+    programmingBooks.push(programmingBook)
+    resp.send(programmingBook)
+})
 app.listen(8080)
