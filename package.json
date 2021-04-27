@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/reymunda/my-first-API/issues"
   },
-  "homepage": "https://github.com/reymunda/my-first-API#readme"
+  "homepage": "https://github.com/reymunda/my-first-API#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
