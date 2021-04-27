@@ -33,4 +33,13 @@ app.post('/api/programmingbooks/add',(req,resp) => {
     programmingBooks.push(programmingBook)
     resp.send(programmingBook)
 })
+app.put('/api/programmingbooks/:id',(req,resp) => {
+    let edit = programmingBooks.find(e => e.id == req.params.id)
+    if(!edit) resp.status(404).send('Book not found')
+    edit.title = req.body.title
+    edit.description = req.body.description
+    edit.price = req.body.price
+
+    resp.send(edit)
+})
 app.listen(8080)
