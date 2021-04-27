@@ -18,4 +18,9 @@ app.get('/',(req,resp) => {
 app.get('/api/programmingbooks/',(req,resp) => {
     resp.send(programmingBooks)
 })
+app.get('/api/programmingbooks/:id',(req,resp) => {
+    let programmingBook = programmingBooks.find(e => e.id == req.params.id)
+    if(!programmingBook) resp.status(404).send('Book not found')
+    resp.send(programmingBook)
+})
 app.listen(8080)
