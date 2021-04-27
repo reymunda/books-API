@@ -42,4 +42,9 @@ app.put('/api/programmingbooks/:id',(req,resp) => {
 
     resp.send(edit)
 })
+app.delete('/api/programmingbooks/:id',(req,resp) => {
+    let deleteBooks = programmingBooks.filter(e => e.id != req.params.id)
+    programmingBooks.splice(0,programmingBooks.length,deleteBooks)
+    resp.send(deleteBooks)
+})
 app.listen(8080)
