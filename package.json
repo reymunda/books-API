@@ -18,6 +18,8 @@
   "homepage": "https://github.com/reymunda/my-first-API#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongodb": "^3.6.6"
+    "mongodb": "^3.6.6",
+    "swagger-jsdoc": "^6.0.0",
+    "swagger-ui-express": "^4.1.6"
   }
 }
